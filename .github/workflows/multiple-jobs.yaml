@@ -9,7 +9,7 @@ jobs:
       - name: step-1 say hello
         run: |
           sleep 10
-          echo '************ welcome to first workflow **************
+          echo " ************ welcome to first workflow ************** "
       - name: step-2 print whats the date today?
         run: date
       - name: step-3 print ubuntu version
