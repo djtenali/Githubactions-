@@ -27,7 +27,7 @@ jobs:
       - name: Step 1 say hello again
         run: |
           sleep 5
-          echo "************* hello again from second job"
+          echo "************* hello again from second job************"
 
         
         
