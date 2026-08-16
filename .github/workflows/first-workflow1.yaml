@@ -1,0 +1,12 @@
+name: second-workflow
+on: 
+  workflow_dispatch:
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: print welcome message
+        run: |
+          echo "workflow created by david joel"
+      - name: Print date
+        run: date
