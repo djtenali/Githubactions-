@@ -1,0 +1,31 @@
+name: 06-github-env-multijob 
+on:
+    workflow_dispatch:
+jobs:
+    build-env-job:
+        runs-on: ubuntu-latest
+        steps: 
+        - name: Set Env variables
+          run: |
+            echo " BUILD_VERSION_NUMBER=${{github.run_number}}" >> $GITHUB_ENV
+        - name: Use Build Version
+          run: |
+            echo "build Version number is:BUILD_VERSION_NUMBER"
+    second-job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Print Github_env from a different job
+          run: |
+            echo "Trying to print BUILD_VERSION_NUMBER from adifferent job "
+            echo "build Version number is:BUILD_VERSION_NUMBER"
+
+
+
+
+
+
+
+
+
+
+
