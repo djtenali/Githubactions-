@@ -11,6 +11,8 @@ jobs:
             echo "app-name=djtenali-devops-dashboard-app" >> $GITHUB_OUTPUT
             echo "iamge-tag=${{ github.sha}}" >> $GITHUB_OUTPUT
             echo "branch-name=${{ github.ref_name}}" >> $GITHUB_OUTPUT
+            echo "*************************************************"
+            echo " Printing application name is: ${{steps.build-info.ouputs.app-name}}"
         - name: Read all the outputs from above step
           run: |
             echo "App Name is: ${{ steps.build-info.outputs.app-name}}"
@@ -19,5 +21,5 @@ jobs:
         - name: Use output to create docker image tag
           run: |
            echo "Creating docker image tag using step output"
-           echo "djtenalihub/${{steps.build-info.outputs.app-name}}:${{steps.build-info.outputs.image-tag}} "
+           echo "djtenalihub/${{ steps.build-info.outputs.app-name }}:${{ steps.build-info.outputs.image-tag }} "
 
