@@ -13,4 +13,4 @@ jobs:
          run: |
            echo "Printing Environmental Variable"
            echo "Application name is: $APP_NAME"
-           echo "Environment is : $ENVIRONMENT"
+           echo "Environment is : $ENVIRONMENT"i
