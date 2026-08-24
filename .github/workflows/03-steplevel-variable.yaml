@@ -13,6 +13,16 @@ jobs:
        echo "Printing Environmental variables"
        echo "Application name is: $APP_NAME"
        echo "Environment is: $ENVIRONMENT"
+    - name: print srep level variable
+      env: 
+        APP_VERSION: "1.0.0"
+      run: |
+       echo "Printing step level variables"
+       echo "Application version is: $APP_VERSION"
+       echo "Application name is: $APP_NAME"
+       echo "Environment is: $ENVIRONMENT"
+
+
   prod-job:
     runs-on: ubuntu-latest
     env:
@@ -24,4 +34,11 @@ jobs:
         echo "Printing Environmental variables"
         echo "Application name is: $APP_NAME"
         echo "Environment is: $ENVIRONMENT"
-          
+    - name: print srep level variable
+      env: 
+        APP_VERSION: "1.0.0"
+      run: |
+        echo "Printing step level variables"
+        echo "Application version is: $APP_VERSION"
+        echo "Application name is: $APP_NAME"
+        echo "Environment is: $ENVIRONMENT"          
