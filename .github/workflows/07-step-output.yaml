@@ -8,7 +8,7 @@ jobs:
         - name: Set step output
           id: my-step
           run: |
-            echo " message=Hello from step output" >> ${{GITHUB_OUTPUT}}
+            echo " message=Hello from step output" >> $GITHUB_OUTPUT
             echo " output has been set for this step "
         - name: Read the step output
           run: |
