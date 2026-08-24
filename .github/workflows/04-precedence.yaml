@@ -5,14 +5,14 @@ env:
     APPLICATION_NAME: djtenali-app-workflow
 jobs: 
   dev-job:
-        runs-on: ubuntu-latest
-  env:
-      APPLICATION_NAME: djtenali-app-joblevel
-     steps:
-     - name: Print Env Variables
-     env: 
-        APPLICATION_NAME: djtenali-app-steplevel
-     run: |
-      echo "Printing Environmental Variables"
-      echo "Application name is: $APPLICATION_NAME"
- 
+    runs-on: ubuntu-latest
+    env:
+        APPLICATION_NAME: djtenali-app-joblevel
+    steps:
+    - name: Print Env Variables
+      env: 
+          APPLICATION_NAME: djtenali-app-steplevel
+      run: |
+          echo "Printing Environmental Variables"
+          echo "Application name is: $APPLICATION_NAME"
+  
