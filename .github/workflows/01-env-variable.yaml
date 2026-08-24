@@ -4,7 +4,7 @@ on:
 env: 
 # env is different and environment is different
      ENVIRONMENT: "dev"
-     APP_NAME: djtenalI
+     APP_NAME: djtenali
 jobs:
    env-demo:
        runs-on: ubuntu-latest
