@@ -16,5 +16,8 @@ jobs:
             echo "App Name is: ${{ steps.build-info.outputs.app-name}}"
             echo "Image Name is: ${{ steps.build-info.outputs.image-tag}}"
             echo "Branch Name is ${{ steps.build-info.outputs.branch-name}}"
-
+        - name: Use output to create docker image tag
+          run: |
+           echo "Creating docker image tag using step output"
+           echo "djtenalihub/${{steps.build-info.outputs.app-name}}:${{steps.build-info.outputs.image-tag}} "
 
