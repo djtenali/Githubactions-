@@ -13,6 +13,7 @@ jobs:
             echo "build Version number is:BUILD_VERSION_NUMBER"
     second-job:
         runs-on: ubuntu-latest
+        needs: build-env-job
         steps:
         - name: Print Github_env from a different job
           run: |
