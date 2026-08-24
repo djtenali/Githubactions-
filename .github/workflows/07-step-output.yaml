@@ -3,7 +3,7 @@ on:
    workflow_dispatch:
 jobs:
     step-output-demo:
-        runs-on: ububntu-latest
+        runs-on: ubuntu-latest
         steps:
         - name: Set step output
           id: my-step
