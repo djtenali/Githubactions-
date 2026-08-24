@@ -1,0 +1,27 @@
+name: 02-job-level-variable
+on:
+    workflow_dispatch:
+jobs:
+  dev-job:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: "dev"
+      APP_NAME: djtenali-dev-app
+    steps:
+    - name: Print variables
+      run: |
+       echo "Printing Environmental variables"
+       echo "Application name is: $APP_NAME"
+       echo "Environment is: $ENVIRONMENT"
+  prod-job:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: "prod"
+      APP_NAME: djtenali-prod-app
+    steps:
+    - name: Print variables
+      run: |
+        echo "Printing Environmental variables"
+        echo "Application name is: $APP_NAME"
+        echo "Environment is: $ENVIRONMENT"
+          
