@@ -11,9 +11,9 @@ jobs:
           echo "NAME=DJ" >> $GITHUB_ENV
           echo "Trying to print APP_VERION and NAME in the same step"
           echo "Application versio is: $APP_VERSION"
-          echo "Name is: NAME"
+          echo "Name is: $NAME"
       - name: Print Variables
         run: |
-          echo "Trying to print APP_VERION and NAME in the same step"
-          echo "Application versio is: $APP_VERSION"
-          echo "Name is: NAME"         
+          echo "Trying to print APP_VERION and NAME in the next step"
+          echo "Application version is: $APP_VERSION"
+          echo "Name is: $NAME"         
