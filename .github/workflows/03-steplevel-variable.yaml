@@ -1,4 +1,4 @@
-name: 02-job-level-variable
+name: 03-step-level-variable
 on:
   workflow_dispatch:
 jobs:
