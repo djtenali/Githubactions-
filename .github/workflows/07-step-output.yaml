@@ -1,0 +1,18 @@
+name: 07-step-output
+on:
+   workflow_dispatch:
+jobs:
+    step-output-demo:
+        runs-on: ububntu-latest
+        steps:
+        - name: Set step output
+          id: my-step
+          run: |
+            echo " message=Hello from step output" >> ${{GITHUB_OUTPUT}}
+            echo " output has been set for this step "
+        - name: Read the step output
+          run: |
+            echo " ================================="
+            echo " Reading the step output"
+            echo "==================================="
+            echo "message is: ${{steps.my-step.outputs.message}}"
