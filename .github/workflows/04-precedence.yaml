@@ -1,6 +1,6 @@
 name: 04-variable-precedence
 on:
-  workflow_dispatch:
+   workflow_dispatch:
 env: 
     APPLICATION_NAME: djtenali-app-workflow
 jobs: 
