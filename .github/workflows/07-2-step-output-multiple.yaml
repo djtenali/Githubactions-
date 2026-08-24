@@ -9,7 +9,7 @@ jobs:
           id: build-info
           run: |
             echo "app-name=djtenali-devops-dashboard-app" >> $GITHUB_OUTPUT
-            echo "iamge-tag=${{ github.sha}}" >> $GITHUB_OUTPUT
+            echo "iamge-tag=${{ github.sha::7}}" >> $GITHUB_OUTPUT
             echo "branch-name=${{ github.ref_name}}" >> $GITHUB_OUTPUT
             echo "*************************************************"
             echo " Printing application name is: ${{steps.build-info.ouputs.app-name}}"
