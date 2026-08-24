@@ -15,4 +15,4 @@ jobs:
             echo " ================================="
             echo " Reading the step output"
             echo "==================================="
-            echo "message is: ${{steps.my-step.outputs.message}}"
+            echo "message is: ${{ steps.my-step.outputs.message }}"
