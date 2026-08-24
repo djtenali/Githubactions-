@@ -1,0 +1,19 @@
+name: 05-github-env
+on:
+    workflow_dispatch:
+jobs:
+    github-env-demo:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Set Variables
+        run: |
+          echo "APP_VERSION=1.0.0" >> $GITHUB_ENV
+          echo "NAME=DJ" >> $GITHUB_ENV
+          echo "Trying to print APP_VERION and NAME in the same step"
+          echo "Application versio is: $APP_VERSION"
+          echo "Name is: NAME"
+      - name: Print Variables
+        run: |
+          echo "Trying to print APP_VERION and NAME in the same step"
+          echo "Application versio is: $APP_VERSION"
+          echo "Name is: NAME"         
