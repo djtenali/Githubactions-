@@ -15,6 +15,6 @@ jobs:
             echo "actor contains a : ${{ contains(github.actor, 'a')}}"
             echo "***********************************************************************"
         - name: Use contains() in condition
-          if: contains(github.repository, 'new'
+          if: contains(github.repository, 'new')
           run: echo "Repo contains dashboard"
           
