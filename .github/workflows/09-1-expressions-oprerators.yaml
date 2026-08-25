@@ -1,0 +1,17 @@
+name: 09-1-Expressions-Operators
+on:
+   workflow_dispatch:
+jobs:
+    operators-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Comparison operators
+              run: |
+                echo "************************************"
+                echo "COMPARISON OPERATORS"
+                echo "************************************"
+                echo "ref_name == main : ${{ github.ref_name == 'main' }}"
+                echo "ref_name != main : ${{ github.ref_name != 'main'}}"
+                echo "run_number > 0   : ${{ github.run_number > 0}}"
+                
+
