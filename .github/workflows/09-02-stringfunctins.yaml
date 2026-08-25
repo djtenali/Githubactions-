@@ -5,11 +5,11 @@ jobs:
     string-functions-demo:
         runs-on: ubuntu-latest
         steps:
-        - name: contains()
-        run: |
-          echo "*********************************"
-          echo "conatins()"
-          echo "*********************************"
-          echo "ref contains main : ${{ contains(github.ref, 'main')}}"
-          echo "repo conatins dashboard : ${{ contains(github.repository, 'dashboard')}}"
-          echo "actor conatins a : ${{ contains(github.actor, 'a')}}"
+        - name: contains
+          run: |
+            echo "*********************************"
+            echo "conatins()"
+            echo "*********************************"
+            echo "ref contains main : ${{ contains(github.ref, 'main')}}"
+            echo "repo contains dashboard : ${{ contains(github.repository, 'dashboard')}}"
+            echo "actor contains a : ${{ contains(github.actor, 'a')}}"
