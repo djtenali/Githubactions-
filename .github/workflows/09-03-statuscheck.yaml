@@ -1,0 +1,28 @@
+name: 09-03-statuscheck
+on:
+    workfow_dispatch:
+jobs:
+    status-demo:
+        runs-on: ububntu-latest
+        steps:
+        - name: Step 1 -Build
+          run: |
+            echo "Building the application"
+            exit 1
+        - name: Step 2 -Success
+          if: ${{ success() }}
+          run: echo "Previous steps are successful"
+        - name: Step 3 -Failure
+          if: ${{ failure() }}
+          run: echo "Previous steps are failed"
+        - name: Step 4 -Always
+          if: ${{ always() }}
+          run: echo "I will run always irrespective of success or failure"
+        - name: Step 5 -Cancelled
+          if: ${{ cancelled() }}
+          run: echo "Workflow is cancelled"
+
+          
+
+
+
