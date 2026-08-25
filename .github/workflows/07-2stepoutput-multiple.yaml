@@ -11,6 +11,8 @@ jobs:
            echo "app-name=djtenali-devops-dashboard-app" >> $GITHUB_OUTPUT
            echo "image-tag=${{github.sha}}" >> $GITHUB_OUTPUT
            echo "branch-name=${{github.ref_name}}" >> $GITHUB_OUTPUT
+           echo "*************************************************************"
+           echo "Printing application name: ${{steps.build-ifo.outputs.app-name}}"
        - name: Read all the outputs from the above step
          run: |
            echo "App name is:   ${{steps.build-info.outputs.app-name}}"
