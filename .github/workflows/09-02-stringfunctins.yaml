@@ -1,6 +1,6 @@
 name: 09-02-stringfunctions
 on:
-  workflow_dispatch:
+   workflow_dispatch:
 jobs:
     string-functions-demo:
         runs-on: ubuntu-latest
