@@ -14,7 +14,7 @@ jobs:
              java-version: '21'
              cache: maven
         - name: Checkout repository
-          uses: actions/checkout@v4  
+          uses: actions/checkout@v7  
         - name: List files
           run: |
             pwd
