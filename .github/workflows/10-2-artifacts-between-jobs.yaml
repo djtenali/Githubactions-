@@ -28,4 +28,18 @@ jobs:
             name: build-artifact
             path: target/devops-dashboard-1.0.0.jar
             retention-days: 7   
-    
+    Deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        steps:
+        - name: Download the JAR artifact
+          uses: actions/download-artifact@v8
+          with:
+            name: build-artifact # name must match with name in line 21
+            path: ./downloaded.jar
+        - name: Verify downloaded artifact
+          run: ls-la ./downloaded.jar/
+        - name: Simulate Deployment
+          run: |
+            echo "Deploying to envirnment"
+            echo "***********Deployment completed *************"
