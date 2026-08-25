@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python
 __pycache__/
 *.py[cod]
@@ -41,4 +42,49 @@ github-actions-deep-dive/
 Siva-Notes/
 jenkins-vs*
 project-actions/*
+=======
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment
+.env
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+github-actions-deep-dive/
+Siva-Notes/
+jenkins-vs*
+project-actions/*
+>>>>>>> 61dd7a58fe97e44741826fb6f5a74a85d5700ff1
 target/*
