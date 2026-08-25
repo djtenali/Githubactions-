@@ -1,6 +1,6 @@
 name: 09-03-statuscheck
 on:
-    workfow_dispatch:
+    workflow_dispatch:
 jobs:
     status-demo:
         runs-on: ububntu-latest
