@@ -13,10 +13,13 @@ jobs:
              distribution: temurin
              java-version: '21'
              cache: maven
-        - name: Check pom.xml
+        - name: Checkout repository
+          uses: actions/checkout@v4  
+        - name: List files
           run: |
-           echo "First 10 lines of pom.xml:"
-           head -n 10 pom.xml     
+            pwd
+            ls -la
+            find . -name "pom.xml"      
         - name: Build and Package
           run: mvn package -DskipTests
         - name: Upload build artifact
