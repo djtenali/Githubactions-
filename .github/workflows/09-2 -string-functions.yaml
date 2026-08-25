@@ -1,0 +1,15 @@
+name: 09-2-string-functions
+on:
+  workflow_dispatch:
+jobs:
+    string-functions-demo:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Contains()
+        run: |
+          echo "*********************************"
+          echo "conatins()"
+          echo "*********************************"
+          echo "ref contains main : ${{ contains(github.ref, 'main')}}"
+          echo "repo conatins dashboard : ${{ conatins(github.repository, 'dashboard')}}"
+          echo "actor conatins a : ${{ contains(github.actor, 'a')}}"
