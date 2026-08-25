@@ -6,6 +6,7 @@ on:
                 description: Target Environment
                 type: choice
                 options:
+                    - development
                     - staging
                     - production
             version:
