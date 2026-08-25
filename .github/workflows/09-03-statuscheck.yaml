@@ -3,7 +3,7 @@ on:
     workflow_dispatch:
 jobs:
     status-demo:
-        runs-on: ububntu-latest
+        runs-on: ubuntu-latest
         steps:
         - name: Step 1 -Build
           run: |
