@@ -1,0 +1,19 @@
+name: 07-2-step-output-multiple
+on: 
+    workflow_dispatch
+jobs: 
+    multiple-output-demo:
+       runs-on: ubuntu-latest
+       steps:
+       - name: Set multiple outputs
+         id: build-info
+         run: |
+           echo "app-name=djtenali-devops-dashboard-app" >> $GITHUB_OUTPUT
+           echo "image-tag=${{github.sha}}" >> $GITHUB_OUTPUT
+           echo "branch-name=${{github.ref_name}}" >> $GITHUB_OUTPUT
+       - name: Read all the outputs from the above step
+         run: |
+           echo "App name is:   ${{steps.biuld-info.outputs.app-name}}"
+           echo "Image tag is:  ${{steps.build-info.outputs.image-tag}}"
+           echo "branch name is: ${{steps.build-info.outputs.branch-name}}"
+           
