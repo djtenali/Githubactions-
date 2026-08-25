@@ -13,7 +13,6 @@ jobs:
            echo "branch-name=${{github.ref_name}}" >> $GITHUB_OUTPUT
        - name: Read all the outputs from the above step
          run: |
-           echo "App name is:   ${{steps.biuld-info.outputs.app-name}}"
+           echo "App name is:   ${{steps.build-info.outputs.app-name}}"
            echo "Image tag is:  ${{steps.build-info.outputs.image-tag}}"
            echo "branch name is: ${{steps.build-info.outputs.branch-name}}"
-           
