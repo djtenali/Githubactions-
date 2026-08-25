@@ -17,4 +17,23 @@ jobs:
         - name: Use contains() in condition
           if: contains(github.repository, 'new')
           run: echo "Repo contains dashboard"
+        - name: startsWith()
+          run: |
+            echo "*********************************"
+            echo "startsWith()"
+            echo "*********************************"  
+            echo "ref_name starts with mai  : ${{ startsWith(github.ref_name,'main')}}"
+        - name: endsWith()
+          run: |
+            echo "*********************************"
+            echo "endsWith()"
+            echo "*********************************"   
+            echo "repo name ends with ons- : ${{ endsWith( github.repository,'ons-')}} "  
+        - name: format()
+          run: |
+            echo "*********************************"
+            echo "format()"
+            echo "*********************************"   
+            #echo "workflow triggered by djtenali, branch is main and run run_number"  
+            echo "${{ format('workflow triggered by: {0} and branch is {1} also run is {2}', github.actor, github.ref_name, github.run_number)}}"
           
