@@ -19,4 +19,4 @@ jobs:
        - name: Use output to create docker image tag
          run: |
            echo "creating docker image tag using the steo output"
-           echo "djtenalihub/${{steps.build-info.outputs.app-name}}:${{steps.build-info.outputs.image-tag}} ."
+           echo "djtenalihub/${{steps.build-info.outputs.app-name}}:${{steps.build-info.outputs.image-tag}} "
