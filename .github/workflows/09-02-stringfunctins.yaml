@@ -1,4 +1,4 @@
-name: 09-2-string-functions
+name: 09-02-stringfunctions
 on:
   workflow_dispatch:
 jobs:
