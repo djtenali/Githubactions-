@@ -9,7 +9,7 @@ jobs:
           run: echo " Step 1 completed successfully"
         - name: STEP 2 fails intentionally
           run: |
-            echo "this sep will fail"
+            echo "this step will fail"
             exit 1
         - name: STEP 3 success()
           if: success()
